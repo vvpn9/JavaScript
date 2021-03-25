@@ -10,10 +10,62 @@
         msg = null;
         // use the alert function to test the msg
         alert(msg);
+
         // use the line below to produce the string type
         msg = "Make China Great Again!";
         // use the alert function to test the msg
         alert(msg);
+
+        let len = msg.length;
+        alert("Make China Great Again!的字符串长度为：" + len);
+
+        let letter = msg.charAt(0);
+        let code = msg.codePointAt(0);
+        alert(letter + code);
+
+        let we = "We"
+        let new_message1 = we.concat(" Make China Great Again!")
+        alert(new_message1)
+
+        let new_message2 = we + " Make China Great Again!"
+        alert(new_message2)
+
+        let s1 = "Hello";
+        let s2 = " Java";
+        let s3 = "Script";
+
+        let new_message3 = s1.concat(s2,s3)
+        alert(new_message3)
+
+        let message = "Happy Birthday";
+        let firstY = message.indexOf("y");
+        let lastY = message.lastIndexOf("y");
+
+        alert("indexOf('y'): " + firstY + "\nlastIndexOf('y'): " + lastY)
+
+        let message4 = "Happy New Year 2021";
+        // 查找y是否存在
+        let result1 = message4.search(/y/);
+        // 全局查找数字
+        let result2 = message4.match(/\d/g); // g为全局标志
+        // 将小写字母a全部替换为答谢字母A
+        let result3 = message4.replace(/a/g, "A")
+        alert('search(/y/): ' +result1+'\nmatch(/\\d/g): '+result2+'\nreplace(/a/g, "A"): ' + result3);
+
+        let message5 = "happy";
+        let result4 = message5.substring(1,-1) // 返回值为h
+        let result5 = message5.slice(1,-1) // 返回app
+        alert(result4 + ' ' + result5)
+
+        let message6 = "happy birthday";
+        let result6 = message6.substring(0,5);
+        let result7 = message6.slice(0,-9);
+        alert('substring(0,5): '+result6+'\nslice(0,-9): '+result7);
+
+        let message7 = "Happy New Year";
+        let upper = message7.toUpperCase();
+        let lower = message7.toLowerCase();
+        alert("全大写："+upper+"\n全小写："+lower)
     </script>
 </head>
 <body>
