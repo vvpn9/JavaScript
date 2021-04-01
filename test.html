@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript函数简单调应</title>
+</head>
+<body>
+<h3>JavaScript函数的简单应用</h3>
+<hr/>
+<script>
+    function test() {
+        alert("test()函数被触发");
+    }
+
+    function total(num1, num2) {
+        let result = num1 + num2
+        alert("调用函数结果为：" + result);
+    }
+
+    function maxNum(num1, num2) {
+        if (num1 > num2) alert(num1);
+        alert(num2);
+    }
+
+    function isEven(num) {
+        if (num % 2 !== 0) return; // 不是偶数不弹出对话框
+        alert(num + "是偶数！"); // 是偶数的情况弹出对话框
+    }
+
+    function max(num1, num2) {
+        if (num1 > num2)
+            alert(num1);
+        alert(num2);
+    }
+
+    let MYAPP = {};
+    MYAPP.name = "myapp";
+    MYAPP.version = 1.0;
+
+    MYAPP.foo = function () {
+        return "foo";
+    }
+
+    let person = {
+        name: "xiaoming",
+        age: "20",
+        gender: "male",
+        passport: "G-12345678",
+        school: "No.4 middle school",
+        address: {
+            city: "Beijing",
+            street: "No.1 Road",
+            zipcode: "100001"
+        }
+    };
+
+    let {name, address: {city, zipcode}} = person; // 要加address:{}否则undefined
+    alert(name + city + zipcode)
+
+</script>
+<button onclick="max(99,100)">点击调用函数</button>
+</body>
+</html>
